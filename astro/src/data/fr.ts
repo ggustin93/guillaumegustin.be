@@ -2,9 +2,9 @@ import type { HomepageData } from './types';
 
 export const fr = {
   head: {
-    title: 'Guillaume Gustin - Architecte de solutions & Ingénieur logiciel',
+    title: 'Guillaume Gustin - IT Business Analyst & Software Engineer',
     description:
-      "Je conçois des logiciels responsables pour organisations à impact : eSanté, plateformes publiques, GIS et IA responsable. Ingénieur biomédical UCLouvain.",
+      "IT Business Analyst au socle software engineering. J'aide les organisations à impact à traduire leurs besoins en solutions numériques pragmatiques.",
   },
 
   nav: [
@@ -19,10 +19,10 @@ export const fr = {
     // Job title kept in English on both locales — a recognised, brand-level
     // intitulé rather than content to translate (avoids the FR calque, keeps
     // EN/FR parity). The rest of the FR showcase stays localised.
-    title: 'Solutions Architect',
+    title: 'IT Business Analyst',
     subtitle: '& Software Engineer',
     description:
-      "Ingénieur biomédical devenu architecte logiciel, je conçois des plateformes web responsables pour la santé, les services publics et les organisations à impact. Aujourd'hui, mon travail relie GIS pour la mobilité bruxelloise et ingénierie IA responsable, avec une même exigence : utilité, sobriété et confiance.",
+      "J'aide les organisations à impact à traduire leurs besoins en solutions numériques pragmatiques. Ingénieur biomédical (UCLouvain) de formation, avec dix ans d'expérience dans le numérique, je me concentre sur l'analyse fonctionnelle, la discovery produit et le design de solution, avec un intérêt croissant pour l'IA responsable — et je reste hands-on quand c'est utile, pour prototyper une idée ou mener une solution jusqu'à la production.",
     location: 'Bruxelles, Belgique',
     links: [
       { label: 'LinkedIn', url: 'https://www.linkedin.com/in/guillaume-gustin/', icon: 'linkedin' as const, external: true },
@@ -46,9 +46,9 @@ export const fr = {
       </p>`,
     focusTitle: 'Mes domaines',
     focus: [
-      { icon: 'cpu' as const, label: 'Ingénierie IA responsable' },
-      { icon: 'code' as const, label: 'Ingénierie logicielle' },
       { icon: 'bar-chart' as const, label: 'Analyse métier IT' },
+      { icon: 'code' as const, label: 'Ingénierie logicielle' },
+      { icon: 'cpu' as const, label: 'Ingénierie IA responsable' },
       { icon: 'leaf' as const, label: 'Numérique responsable' },
     ],
   },

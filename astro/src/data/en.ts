@@ -2,9 +2,9 @@ import type { HomepageData } from './types';
 
 export const en = {
   head: {
-    title: 'Guillaume Gustin - Solutions Architect & Software Engineer',
+    title: 'Guillaume Gustin - IT Business Analyst & Software Engineer',
     description:
-      'I craft responsible software for mission-driven organisations: eHealth, public-sector platforms, GIS and AI engineering. Biomedical engineer, UCLouvain.',
+      'IT Business Analyst with a software engineering background. I help mission-driven organisations translate their needs into pragmatic digital solutions.',
   },
 
   nav: [
@@ -16,10 +16,10 @@ export const en = {
   ],
 
   showcase: {
-    title: 'Solutions Architect',
+    title: 'IT Business Analyst',
     subtitle: '& Software Engineer',
     description:
-      'Biomedical engineer turned software architect, I design responsible web platforms for healthcare, public services, and mission-driven teams. My current work combines GIS for Brussels Mobility with practical AI engineering, always grounded in usefulness, sobriety, and trust.',
+      'I help mission-driven organisations translate their needs into pragmatic digital solutions. A biomedical engineer (UCLouvain) by training with 10 years in ICT, I focus on functional analysis, product discovery and solution design, with a growing emphasis on responsible AI — and stay hands-on when useful, whether to prototype an idea or carry a solution through to production.',
     location: 'Brussels, Belgium',
     links: [
       { label: 'LinkedIn', url: 'https://www.linkedin.com/in/guillaume-gustin/', icon: 'linkedin' as const, external: true },
@@ -43,9 +43,9 @@ export const en = {
       </p>`,
     focusTitle: 'Where I focus',
     focus: [
-      { icon: 'cpu' as const, label: 'Responsible AI Engineering' },
-      { icon: 'code' as const, label: 'Software Engineering' },
       { icon: 'bar-chart' as const, label: 'IT Business Analysis' },
+      { icon: 'code' as const, label: 'Software Engineering' },
+      { icon: 'cpu' as const, label: 'Responsible AI Engineering' },
       { icon: 'leaf' as const, label: 'Responsible IT' },
     ],
   },

@@ -18,6 +18,10 @@ const siteUrl = Astro.site!.href; // https://guillaumegustin.be/
 const canonical =
   Astro.url.pathname === '/' ? siteUrl : new URL(Astro.url.pathname, Astro.site).href.replace(/\/$/, '');
 const ogImageUrl = new URL('/img/who-am-i/og-card.jpg', Astro.site).href;
+// Brand-level job title: deliberately identical in EN and FR (see src/data/fr.ts),
+// and the same string the OG card is painted with (npm run og:card).
+const jobTitle = 'IT Business Analyst & Software Engineer';
+const ogImageAlt = `Guillaume Gustin — ${jobTitle} based in Brussels`;
 const ogLocale = lang === 'fr' ? 'fr_BE' : 'en_US';
 const ogLocaleAlternate = lang === 'fr' ? 'en_US' : 'fr_BE';
 ---
@@ -48,7 +52,7 @@ const ogLocaleAlternate = lang === 'fr' ? 'en_US' : 'fr_BE';
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Guillaume Gustin — Solutions Architect & Software Engineer based in Brussels" />
+    <meta property="og:image:alt" content={ogImageAlt} />
     <meta property="og:locale" content={ogLocale} />
     <meta property="og:locale:alternate" content={ogLocaleAlternate} />
     <meta property="og:site_name" content="Guillaume Gustin" />
@@ -59,7 +63,7 @@ const ogLocaleAlternate = lang === 'fr' ? 'en_US' : 'fr_BE';
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
-    <meta name="twitter:image:alt" content="Guillaume Gustin — Solutions Architect & Software Engineer based in Brussels" />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
 
     <!-- Favicons -->
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
@@ -74,7 +78,7 @@ const ogLocaleAlternate = lang === 'fr' ? 'en_US' : 'fr_BE';
     <link rel="preload" href="/fonts/inter/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/inter/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
 
-    <JsonLd lang={lang} title={title} description={description} ogImageUrl={ogImageUrl} />
+    <JsonLd lang={lang} jobTitle={jobTitle} title={title} description={description} ogImageUrl={ogImageUrl} />
 
     <!-- Umami Analytics (privacy-focused) -->
     <script

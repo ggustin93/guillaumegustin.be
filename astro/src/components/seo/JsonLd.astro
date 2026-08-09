@@ -5,12 +5,13 @@
  */
 interface Props {
   lang: 'en' | 'fr';
+  jobTitle: string;
   title: string;
   description: string;
   ogImageUrl: string;
 }
 
-const { lang, title, description, ogImageUrl } = Astro.props;
+const { lang, jobTitle, title, description, ogImageUrl } = Astro.props;
 const siteUrl = Astro.site!.href;
 
 const personId = `${siteUrl}#guillaume-gustin`;
@@ -22,7 +23,7 @@ const person = {
   name: 'Guillaume Gustin',
   url: siteUrl,
   image: ogImageUrl,
-  jobTitle: lang === 'fr' ? 'Architecte de solutions & Ingénieur logiciel' : 'Solutions Architect & Software Engineer',
+  jobTitle,
   description,
   email: 'guillaume@pwablo.be',
   telephone: '+32494878936',
@@ -42,10 +43,12 @@ const person = {
     { '@type': 'EducationalOrganization', name: 'MIT Global Startup Labs' },
   ],
   knowsAbout: [
+    'IT Business Analysis',
+    'Functional Analysis',
+    'Product Discovery',
+    'Solution Design',
     'Responsible Software',
     'Full-Stack Web Development',
-    'Solutions Architecture',
-    'IT Business Analysis',
     'React',
     'Astro',
     'Tailwind CSS',
@@ -76,7 +79,7 @@ const person = {
   ],
   hasOccupation: {
     '@type': 'Occupation',
-    name: lang === 'fr' ? 'Architecte de solutions & Ingénieur logiciel' : 'Solutions Architect & Software Engineer',
+    name: jobTitle,
     occupationLocation: { '@type': 'City', name: 'Brussels' },
   },
   worksFor: {

@@ -1,29 +1,29 @@
 # Guillaume Gustin
 
-> Guillaume Gustin crafts responsible software for mission-driven organisations:
-> eHealth platforms, public-sector services, GIS tools, and practical AI engineering.
-> He is a Brussels-based Solutions Architect, IT Business Analyst, Software Engineer,
-> and biomedical engineer trained at UCLouvain.
+> Guillaume Gustin is a Brussels-based IT Business Analyst with a software engineering
+> background. He helps mission-driven organisations translate their needs into pragmatic
+> digital solutions: eHealth platforms, public-sector services, GIS tools, and responsible
+> AI. Biomedical engineer trained at UCLouvain.
 
-Guillaume Gustin is a solutions architect, IT business analyst and software engineer
-based in Brussels, Belgium. He began in biomedical engineering at UCLouvain, where
-software became a way to make health systems more useful to people. Over 10+ years,
-he has built patient-monitoring tools, co-founded the medtech startup MedC2, supported
-non-profits through digital transformation, and contributed to public-sector platforms.
-His current focus is responsible AI engineering, GIS, sustainable web design, and
-software that creates measurable social value.
+Guillaume Gustin is an IT business analyst and software engineer based in Brussels,
+Belgium. He began in biomedical engineering at UCLouvain, where software became a way
+to make health systems more useful to people. Over 10 years in ICT, he has built
+patient-monitoring tools, co-founded the medtech startup MedC2, supported non-profits
+through digital transformation, and contributed to public-sector platforms. He focuses
+on functional analysis, product discovery and solution design, with a growing emphasis
+on responsible AI, and stays hands-on when useful — from prototype to production.
 
 He runs Pwablo (https://pwablo.be), a sustainable web studio.
 
 ## Current role
 
-- Software Engineer at Gate 16 (2026–present) — GIS web solutions for Brussels Mobility;
-  R&D on RAG systems and agentic AI.
+- Functional Analyst & Software Engineer at Gate 16 (October 2025–present) — GIS web
+  solutions for Brussels Mobility; R&D on RAG systems and agentic AI.
 
 ## Background
 
-- Research Software Engineer, Vrije Universiteit Brussel (2025) — analytics dashboard for
-  the Ghostly rehabilitation study.
+- Research Software Engineer, Vrije Universiteit Brussel (2025–2026) — analytics dashboard
+  for the Ghostly rehabilitation study.
 - Founder & Web Designer, Pwablo (2022–present) — sustainable web agency.
 - Digital Transformation Advisor, BRUXEO (2022–2024) — supporting non-profits.
 - Co-founder & Lead Developer, MedC2 / The Medical Cloud Company (2019–2021) — ePRO
@@ -40,12 +40,12 @@ He runs Pwablo (https://pwablo.be), a sustainable web studio.
 
 ## Expertise
 
-Solutions architecture, IT business analysis, full-stack web development (React, Astro,
-Ionic, Tailwind CSS, shadcn/ui, Node.js, Python, n8n, PostgreSQL, Supabase), AI
-engineering (RAG systems, agentic AI, LLM integration, AI governance), responsible IT
-(eco-design, digital sobriety, GDPR), digital health and patient-reported outcomes,
-GIS platforms, public-sector services, non-profit digital transformation, and
-biomedical engineering.
+IT business analysis, functional analysis, product discovery, solution design,
+full-stack web development (React, Astro, Ionic, Tailwind CSS, Node.js, Python,
+n8n, PostgreSQL, Supabase), AI engineering (RAG systems, agentic AI, LLM
+integration, AI governance), responsible IT (eco-design, digital sobriety, GDPR),
+digital health and patient-reported outcomes, GIS platforms, public-sector
+services, non-profit digital transformation, and biomedical engineering.
 
 ## Published Research
 

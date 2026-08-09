@@ -57,3 +57,6 @@ logs/
 
 # Claude Code
 CLAUDE.md
+
+# Serena MCP (per-machine tool state)
+.serena/

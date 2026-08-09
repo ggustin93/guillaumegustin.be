@@ -214,7 +214,7 @@ const modelContext = (navigator as WebMcpNavigator).modelContext;
 if (modelContext?.provideContext) {
   const profileSummary = `# Guillaume Gustin
 
-Solutions Architect, IT Business Analyst and Software Engineer based in Brussels.
+IT Business Analyst and Software Engineer based in Brussels.
 Focus areas include responsible AI, software engineering, functional analysis,
 web eco-design, GIS platforms, digital health, and mission-driven public-sector
 or non-profit work.

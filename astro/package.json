@@ -11,7 +11,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "deploy": "astro build && wrangler pages deploy dist --project-name=guillaumegustin-be --branch=main --commit-dirty=true"
+    "deploy": "astro build && wrangler pages deploy dist --project-name=guillaumegustin-be --branch=main --commit-dirty=true",
+    "og:card": "node scripts/generate-og-card.mjs \"IT Business Analyst & Software Engineer\""
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
