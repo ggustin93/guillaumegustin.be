@@ -1,32 +1,30 @@
-# guillaumegustin.be — Astro 5
+# guillaumegustin.be — Astro app
 
-Réimplémentation moderne du site Hugo (racine du repo) en **Astro 5 + Tailwind CSS 4**.
-Portfolio one-page bilingue : EN à `/`, FR à `/fr`.
+One-page bilingual portfolio (EN at `/`, FR at `/fr`), built with **Astro 5 + Tailwind CSS 4** and deployed on **Cloudflare Pages**.
 
-## Commandes
+## Commands
 
 ```bash
 npm install
 npm run dev        # http://localhost:4321
 npm run build      # → dist/
-npm run preview    # sert dist/ en local
-npx astro check    # type-checking (données EN/FR validées par l'interface partagée)
+npm run preview    # serve dist/ locally
+npm run check      # astro check (EN/FR data validated against a shared interface)
+npm run test:a11y  # axe-core via Playwright (EN + FR)
+npm run deploy     # build + wrangler pages deploy
 ```
 
 ## Architecture
 
-- `src/data/{en,fr}.ts` — tout le contenu, typé par `src/data/types.ts` (`satisfies HomepageData` : une clé manquante en FR casse le build)
-- `src/data/images.ts` — registre central des images (`src/assets/img/`, optimisées AVIF/WebP au build par sharp)
-- `src/components/` — un composant par section ; styles scopés par composant
-- `src/styles/global.css` — tokens Tailwind 4 (`@theme`), fonts Inter auto-hébergées, animations reveal
-- `src/scripts/main.ts` — unique script client (~2 KB) : sticky header, menu mobile, scroll-reveal, lightbox
-- SEO : head complet dans `src/layouts/BaseLayout.astro` (canonical, hreflang, OG, Twitter, JSON-LD Person + WebSite), sitemap via `@astrojs/sitemap`
+- `src/data/{en,fr}.ts` — all content, typed by `src/data/types.ts` (`satisfies HomepageData`: a missing key in FR breaks the build)
+- `src/data/images.ts` — central image registry (`src/assets/img/`, optimised to AVIF/WebP at build by sharp)
+- `src/components/` — one component per section; component-scoped styles
+- `src/styles/global.css` — Tailwind 4 tokens (`@theme`), self-hosted Inter fonts, reveal animations
+- `src/scripts/main.ts` — single client script (~2 KB): sticky header, mobile menu, scroll-reveal, lightbox
+- SEO: full head in `src/layouts/BaseLayout.astro` (canonical, hreflang, OG, Twitter, JSON-LD Person + WebSite), sitemap via `@astrojs/sitemap`
 
-## Bascule Firebase (étape finale, à faire après validation)
+## Deploy
 
-1. `firebase.json` : `"public": "astro/dist"`
-2. Headers : ajouter `/_astro/**` → `Cache-Control: public, max-age=31536000, immutable` (assets hashés) ; garder no-cache pour HTML
-3. Garder `cleanUrls: true` et `trailingSlash: false` (aligné avec `trailingSlash: 'never'` d'Astro)
-4. Tester d'abord sur un preview channel : `firebase hosting:channel:deploy astro-preview`
-5. Lighthouse sur l'URL du channel (le Lighthouse local est peu fiable)
-6. Une fois en prod : supprimer les fichiers Hugo dans un commit de cleanup séparé
+Cloudflare Pages project `guillaumegustin-be`, deployed by direct Wrangler upload (`npm run deploy`, run from this directory so `functions/` is included). `public/_headers` holds security headers and asset caching rules.
+
+The contact form currently uses `mailto:`; a Pages Function (`functions/api/contact.js`, Mailjet) exists but is not active.

@@ -6,7 +6,7 @@
 ![i18n](https://img.shields.io/badge/i18n-EN%20%7C%20FR-blueviolet)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Personal portfolio for **Guillaume Gustin** — Full-Stack Developer & Biomedical Engineer based in Brussels.
+Personal portfolio for **Guillaume Gustin** — IT Business Analyst & Software Engineer based in Brussels.
 
 ## Stack
 
@@ -17,7 +17,6 @@ Personal portfolio for **Guillaume Gustin** — Full-Stack Developer & Biomedica
 | Hosting | Cloudflare Pages |
 | Images | AVIF / WebP optimised at build via `sharp` |
 | Languages | English (`/`), French (`/fr`) |
-| Serverless | Cloudflare Pages Functions (contact form → Mailjet) |
 
 ## App
 
@@ -35,9 +34,9 @@ npm run deploy   # build + wrangler pages deploy
 
 [`archive/`](archive/) contains the legacy **Hugo + Firebase** version of the site, kept for reference. See [`archive/README.md`](archive/README.md) for details. Full history is also in git.
 
-## Highlights
+## Design choices
 
-- **Performance-first** — optimised assets, minimal JS (~2 KB client script), Lighthouse 90+
-- **Data-driven** — all content in `src/data/{en,fr}.ts`, typed via `HomepageData` interface
-- **Accessible** — semantic HTML, WCAG AA, 0 axe violations (EN + FR)
-- **Écoconception** — static-first, minimal HTTP requests, lazy loading, no unnecessary deps
+- **Static-first** — no client framework, a single ~2 KB script for header, menu and scroll effects
+- **Data-driven** — all content in `src/data/{en,fr}.ts`, typed via a shared `HomepageData` interface
+- **Accessible** — semantic HTML, 0 axe violations on both languages (checked via Playwright)
+- **Low footprint** — build-time image optimisation, lazy loading, few dependencies
