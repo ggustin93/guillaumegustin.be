@@ -9,7 +9,6 @@ For all coding tasks, content edits, and deploy instructions, read **`astro/CLAU
 | Path | What it is |
 |------|-----------|
 | `astro/` | **The live site** — Astro 5 + Cloudflare Pages |
-| `archive/` | Legacy Hugo + Firebase version (reference only) |
 | `README.md` | Public-facing overview |
 | `LICENSE` | MIT |
 

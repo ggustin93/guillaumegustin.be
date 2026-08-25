@@ -6,6 +6,8 @@
 ![i18n](https://img.shields.io/badge/i18n-EN%20%7C%20FR-blueviolet)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
+[![guillaumegustin.be](docs/screenshot.png)](https://guillaumegustin.be/)
+
 Personal portfolio for **Guillaume Gustin** — IT Business Analyst & Software Engineer based in Brussels.
 
 ## Stack
@@ -29,10 +31,6 @@ npm run dev      # http://localhost:4321
 npm run build    # → dist/
 npm run deploy   # build + wrangler pages deploy
 ```
-
-## Archive
-
-[`archive/`](archive/) contains the legacy **Hugo + Firebase** version of the site, kept for reference. See [`archive/README.md`](archive/README.md) for details. Full history is also in git.
 
 ## Design choices
 
