@@ -47,12 +47,12 @@ const pad = (n: number) => String(n).padStart(2, '0');
 
     {
       featured.map((work, i) => {
-        const galleryData = work.gallery
-          ? JSON.stringify([
-              { src: workImages[work.image].src, alt: work.title },
-              ...work.gallery.map((g) => ({ src: workImages[g.image].src, alt: g.alt })),
-            ])
-          : undefined;
+        {/* data-gallery always carries the full-resolution sources — without it the
+            lightbox falls back to the rendered thumbnail (480/800w), blurry fullscreen */}
+        const galleryData = JSON.stringify([
+          { src: workImages[work.image].src, alt: work.title },
+          ...(work.gallery ?? []).map((g) => ({ src: workImages[g.image].src, alt: g.alt })),
+        ]);
         const shotCount = work.gallery ? work.gallery.length + 1 : 0;
         return (
         <article class:list={['work', 'reveal', { 'work--even': work.isEven }]}>
@@ -121,6 +121,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
                   role="button"
                   tabindex="0"
                   aria-label={`${work.title} — ${t.enlargeLabel}`}
+                  data-gallery={JSON.stringify([{ src: workImages[work.image].src, alt: work.title }])}
                 >
                   <Picture
                     src={workImages[work.image]}
