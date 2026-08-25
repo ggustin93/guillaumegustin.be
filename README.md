@@ -32,6 +32,14 @@ npm run build    # → dist/
 npm run deploy   # build + wrangler pages deploy
 ```
 
+## Lighthouse
+
+Measured on the live site with Lighthouse 12, mobile emulation (2026-08-25):
+
+**Performance 98 · Accessibility 100 · Best Practices 100 · SEO 100**
+
+Scores vary slightly between runs and environments — run it yourself on [PageSpeed Insights](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fguillaumegustin.be).
+
 ## Design choices
 
 - **Static-first** — no client framework, a single ~2 KB script for header, menu and scroll effects

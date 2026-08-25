@@ -40,11 +40,11 @@ const mailtoStrings =
     <p class="contact__subtitle">{data.subtitle}</p>
 
     <div class="contact__grid">
+      {/* No action attribute: submit is fully handled in JS (mailto built there);
+          a mailto action would be flagged as mixed content by Lighthouse, and the
+          plain mail link below is the no-JS fallback. */}
       <form
         id="contact-form"
-        action={`mailto:${CONTACT_EMAIL}`}
-        method="POST"
-        enctype="text/plain"
         aria-label={t.contactFormAriaLabel}
         data-recipient={CONTACT_EMAIL}
         data-subject={mailtoStrings.subject}
