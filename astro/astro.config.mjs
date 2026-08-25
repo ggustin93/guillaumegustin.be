@@ -8,6 +8,10 @@ export default defineConfig({
   site: 'https://guillaumegustin.be',
   // Must match firebase.json `"trailingSlash": false`
   trailingSlash: 'never',
+  build: {
+    // ~10KB total CSS: inlining removes a critical request chain (FCP/LCP on slow 4G)
+    inlineStylesheets: 'always',
+  },
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'fr'],
